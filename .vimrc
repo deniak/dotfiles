@@ -36,7 +36,7 @@ map <F2> :reg "0123456789-*+:/<CR>
 " Toggle hidden characters display
 map <silent> <F6> :set nolist!<CR>:set nolist?<CR>
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace"
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.,eol:$ " Highlight problematic whitespace"
 
 " Toggle spell-checking
 map <silent> <F8> :set nospell!<CR>:set nospell?<CR>
@@ -83,28 +83,6 @@ map <F1> :ls<CR>:b<Space>
 " set clipboard=                  "       Disable automatic X11 clipboard crossover
 " }}}
 
- " Color {{{
-"   All coloring options are for the non-GUI Vim (see :help cterm-colors).
-set t_Co=256
-color desert
-
-" Bold the cursorline instead of underlying
-hi CursorLine cterm=bold
-
-" Statusline
-hi StatusLine term=bold,reverse cterm=bold ctermfg=7 ctermbg=none
-hi StatusLineNC term=reverse cterm=bold ctermfg=8
-" hi User1 ctermfg=4
-" hi User2 ctermfg=1
-" hi User3 ctermfg=5
-" hi User4 cterm=bold ctermfg=8
-" hi User5 ctermfg=6
-" hi User6 ctermfg=2
-" hi User7 ctermfg=2
-" hi User8 ctermfg=3
-" hi User9 cterm=reverse ctermfg=8 ctermbg=7
-" }}}
-
 " Bundle {{{
 " Launch vim and run :PluginInstall
 " To install from command line: vim +PluginInstall +qall
@@ -122,6 +100,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'spf13/vim-autoclose'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
 " Writing {{{
 Bundle 'reedes/vim-litecorrect'
 Bundle 'reedes/vim-textobj-sentence'
@@ -152,6 +131,22 @@ Bundle 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
+" }}}
+
+ " Color {{{
+set t_Co=256
+color desert
+" let g:solarized_termcolors=256
+" let g:solarized_contrast="high"
+" set background=dark
+" color solarized
+
+" Bold the cursorline instead of underlying
+hi CursorLine cterm=bold
+
+" Statusline
+hi StatusLine term=bold,reverse cterm=bold ctermfg=7 ctermbg=none
+hi StatusLineNC term=reverse cterm=bold ctermfg=8
 " }}}
 
 " vim-airline - statusbar {{{
