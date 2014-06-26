@@ -43,6 +43,9 @@ map <silent> <F8> :set nospell!<CR>:set nospell?<CR>
 
 " Maps Omnicompletion to CTRL-space since ctrl-x ctrl-o is for Emacs-style RSI
 inoremap <Nul> <C-x><C-o>
+
+vnoremap j gj
+vnoremap k gk
 " }}}
 
 " Folding (spacebar toggles) {{{
