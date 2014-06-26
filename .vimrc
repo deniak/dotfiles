@@ -46,6 +46,11 @@ inoremap <Nul> <C-x><C-o>
 
 vnoremap j gj
 vnoremap k gk
+vnoremap <down> gj
+vnoremap <up> gk
+inoremap <down> <Esc>`^gji
+inoremap <up> <Esc>`^gki
+
 " }}}
 
 " Folding (spacebar toggles) {{{
