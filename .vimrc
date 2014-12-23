@@ -109,6 +109,7 @@ Bundle 'spf13/vim-autoclose'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'junegunn/vim-easy-align'
 " Writing {{{
 Bundle 'reedes/vim-litecorrect'
 Bundle 'reedes/vim-textobj-sentence'
