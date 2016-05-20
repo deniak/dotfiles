@@ -1,6 +1,7 @@
 # deniak's dotfiles
 
 My dotfiles for:
-  - vi
+  - git
   - GNU Screen
+  - vi
   - zsh
