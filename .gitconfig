@@ -1,0 +1,27 @@
+[user]
+    name = Denis Ah-Kang
+    email = denis@w3.org
+[credential]
+    helper = cache --timeout=3600
+[credential "https://github.com"]
+    username = deniak
+[color]
+    ui = auto
+[push]
+    default = simple
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    mhdiff = diff origin/master..HEAD
+    mhlog = log origin/master..HEAD
+    ri = "!f() { git rebase -i HEAD~$1; }; f"
+    reset1= reset --soft HEAD~1
+[branch "master"]
+    mergeoptions = --no-ff
+[remote "origin"]
+    fetch = +refs/heads/*:refs/remotes/origin/*
+    fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+[commit]
+    gpgsign = true
